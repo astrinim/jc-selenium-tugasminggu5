@@ -16,22 +16,22 @@ public class LoginPage {
     }
 
     // Locator use Page Factory
-    @FindBy(xpath = "//input[@placeholder='Username']")
+    @FindBy(xpath = "//input[@id='user-name']")
     private WebElement username;
 
-    @FindBy(xpath = "//input[@placeholder='Password']")
+    @FindBy(xpath = "//input[@id='password']")
     private WebElement password;
 
-    @FindBy(xpath = "//button[contains(@class, 'login-button')]")
+    @FindBy(xpath = "//input[@id='login-button']")
     private WebElement btnLogin;
 
-    @FindBy(xpath = "//h6[contains(@class, 'topbar-header')]")
-    private WebElement txtDashboard;
+    @FindBy(xpath = "//span[@class='title']")
+    private WebElement txtProduct;
 
-    @FindBy(xpath = "//p[@class='oxd-userdropdown-name']")
+    @FindBy(xpath = "//button[@id='react-burger-menu-btn']")
     private WebElement btnProfile;
 
-    @FindBy(xpath = "//a[normalize-space()='Logout']")
+    @FindBy(xpath = "//a[@id='logout_sidebar_link']")
     private WebElement btnLogout;
 
     @FindBy(xpath = "//p[contains(@class, 'alert-content-text')]")
@@ -66,8 +66,8 @@ public class LoginPage {
     }
 
     // Step Validation
-    public String getTxtDashboard(){
-        return txtDashboard.getText();
+    public String getTxtProduct(){
+        return txtProduct.getText();
     }
 
     public String getTxtInvalidLogin(){
