@@ -34,10 +34,10 @@ public class LoginPage {
     @FindBy(xpath = "//a[@id='logout_sidebar_link']")
     private WebElement btnLogout;
 
-    @FindBy(xpath = "//p[contains(@class, 'alert-content-text')]")
+    @FindBy(xpath = "//h3[@data-test='error']")
     private WebElement txtInvalidLogin;
 
-    @FindBy(xpath = "//span[contains(@class, 'input-field-error-message')]")
+    @FindBy(xpath = "//h3[@data-test='error']")
     private WebElement txtRequired;
 
     // Step Action
